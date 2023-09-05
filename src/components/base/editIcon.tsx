@@ -22,7 +22,7 @@ export const EditIcon = () => {
         },
       }}
     >
-      <IconBase src={EditSVGICon} />
+      <IconBase src={EditSVGICon} alt="Edit" />
     </Box>
   );
 };

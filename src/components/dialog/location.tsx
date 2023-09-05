@@ -19,7 +19,7 @@ export const LocationDialog: React.FC<{
 }> = ({ open, onClose, item, view }) => {
   return (
     <Dialog open={open} onClose={onClose} data-testid="location-dialog">
-      <DialogContent sx={{ width: '440px', p: '0 25px' }}>
+      <DialogContent sx={{ width: { sm: '390px', xs: 'auto' }, p: '0 25px' }}>
         <Box
           py={2}
           display="flex"

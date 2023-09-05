@@ -9,7 +9,7 @@ export const LocationIconLabel: React.FC<{
 }> = ({ icon, children }) => {
   return (
     <Box display="flex" alignItems="center">
-      <CardIcon src={LocationInfoIcons[icon]} />
+      <CardIcon src={LocationInfoIcons[icon]} alt={icon} />
       <Typography variant="body2" color="text.primary">
         {children}
       </Typography>
