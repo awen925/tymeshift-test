@@ -9,6 +9,10 @@ Aron Wyen
 ## Introduction
 
 This app has 2 main parts - Location-Card page and Card-Detail modal. \
+Here the timezone for each location is set manually by myself and the time in the location card is continuously updated after every 1 minute.
+
+## How to install the application
+
 You can install this app by running `yarn` script. \
 About node version and npm version, you can find them at `.npmrc`. \
 Then you can see the application by simply running the script - `yarn start`
