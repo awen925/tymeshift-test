@@ -1,25 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import { ThemeProvider } from '@emotion/react';
+
+import { muiTheme } from './config/muiTheme';
+import ViewCountProvider from './contexts/viewCountContext';
+import { ErrorBoundary } from 'react-error-boundary';
+
+const LocationPage = React.lazy(() => import('./pages/location'));
+const PageError = React.lazy(() => import('./pages/error/500'));
 
 function App() {
+  const [queryClient] = useState(() => new QueryClient());
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={muiTheme()}>
+      <QueryClientProvider client={queryClient}>
+        <ErrorBoundary
+          FallbackComponent={PageError}
+          onReset={() => window.location.replace('/')}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <BrowserRouter>
+            <ViewCountProvider>
+              <Routes>
+                <Route
+                  path="/"
+                  element={
+                    <Suspense fallback={<>Loading...</>}>
+                      <LocationPage />
+                    </Suspense>
+                  }
+                />
+                <Route path="*" element={<Navigate to="/" />} />
+              </Routes>
+            </ViewCountProvider>
+          </BrowserRouter>
+        </ErrorBoundary>
+      </QueryClientProvider>
+    </ThemeProvider>
   );
 }
 

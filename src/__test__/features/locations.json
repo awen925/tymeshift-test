@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "createdAt": "2021-03-05T09:10:35.462Z",
+    "name": "McGlynnview",
+    "userCount": 6221,
+    "description": "Investment Account",
+    "timezone": -12
+  },
+  {
+    "id": "2",
+    "createdAt": "2021-03-04T19:53:53.946Z",
+    "name": "Garthburgh",
+    "userCount": 94343,
+    "description": "needs-based intangible",
+    "timezone": -11
+  },
+  {
+    "id": "3",
+    "createdAt": "2021-03-04T17:08:15.954Z",
+    "name": "New Raina",
+    "userCount": 66367,
+    "description": "hub Configuration",
+    "timezone": -10
+  },
+  {
+    "id": "4",
+    "createdAt": "2021-03-04T18:29:55.591Z",
+    "name": "Fadelhaven",
+    "userCount": 32882,
+    "description": "Creative",
+    "timezone": -9
+  },
+  {
+    "id": "5",
+    "createdAt": "2021-03-05T06:45:19.441Z",
+    "name": "Rachaelville",
+    "userCount": 53290,
+    "description": "Coordinator invoice HTTP",
+    "timezone": -8
+  },
+  {
+    "id": "6",
+    "createdAt": "2021-03-05T07:09:57.238Z",
+    "name": "West Evashire",
+    "userCount": 74569,
+    "description": "Computers",
+    "timezone": -7
+  },
+  {
+    "id": "7",
+    "createdAt": "2021-03-05T05:30:41.235Z",
+    "name": "Imeldamouth",
+    "userCount": 42623,
+    "description": "RSS solid state Refined Steel Table",
+    "timezone": -6
+  },
+  {
+    "id": "8",
+    "createdAt": "2021-03-04T15:25:20.453Z",
+    "name": "New Dollybury",
+    "userCount": 31953,
+    "description": "matrix Heard Island and McDonald Islands",
+    "timezone": -5
+  },
+  {
+    "id": "9",
+    "createdAt": "2021-03-05T07:26:18.807Z",
+    "name": "Adelefurt",
+    "userCount": 36318,
+    "description": "Granite",
+    "timezone": -4
+  },
+  {
+    "id": "10",
+    "createdAt": "2021-03-04T12:28:55.319Z",
+    "name": "South Freidabury",
+    "userCount": 10435,
+    "description": "Rustic",
+    "timezone": -3
+  }
+]

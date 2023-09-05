@@ -1,6 +1,53 @@
-# Getting Started with Create React App
+# Tymeshift Test Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple application for `all locations`.
+
+## Author
+
+Aron Wyen
+
+## Introduction
+
+This app has 2 main parts - Location-Card page and Card-Detail modal. \
+You can install this app by running `yarn` script. \
+About node version and npm version, you can find them at `.npmrc`. \
+Then you can see the application by simply running the script - `yarn start`
+
+## Design Decisions
+
+Before starting the home task, I made some decisions regarding how to build this app.
+
+### Tech stacks
+
+React.js, MUI, Context API, react-query, Jest
+
+### Design Architecture
+
+#### UI library
+
+Following the requirements in the instruction, as a frontend UI library I chose `React.js`.
+
+#### State management
+
+This application is quite simple app, so I decided to use `Context API` to manage global states (view counts of each location card).
+
+#### Styling
+
+In this application, I used MUI v5 for the styling.
+
+#### Handle data fetching dealing with remote apis
+
+`react-query` with `axios`
+
+#### Error handling or Dirty actions
+
+`ErrorBoundary` - This is set for catching up UI errors. \
+And for the errors during the server api call, I handled it in `Layout` component.
+
+#### Unit testing
+
+I did unit testing for some of components and they are in `src/__test__`.
+In order to see how they are working, you can run `yarn test`.
 
 ## Available Scripts
 
@@ -24,23 +71,12 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### `yarn lint:fix`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you want to fix lint issues through whole codebase, then you should need this script run.
